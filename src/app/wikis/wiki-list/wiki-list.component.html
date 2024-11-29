@@ -1,1 +1,8 @@
-<p>wiki-list works!</p>
+<div class="wiki-container">
+  <h1> Wikis Populares</h1>
+  <div class="wiki-list">
+    <app-wiki-card *ngFor="let wiki of wikis" [wiki]="wiki"></app-wiki-card>
+  </div>
+</div>
+
+  

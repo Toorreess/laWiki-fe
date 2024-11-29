@@ -1,0 +1,7 @@
+<div class="wiki-card" [routerLink]="['/wikis', wiki.id]">
+  <img [src]="wiki.image" alt="{{ wiki.name }}" class="wiki-image" />
+  <div class="wiki-content">
+    <h2>{{ wiki.name }}</h2>
+    <p>{{ wiki.description }}</p>
+  </div>
+</div>
