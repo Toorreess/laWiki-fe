@@ -1,0 +1,27 @@
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="titulo">Título:</label>
+      <input id="titulo" formControlName="titulo" type="text">
+    </div>
+    <div>
+      <label for="texto">Texto (Markdown):</label>
+      <textarea id="texto" formControlName="texto" class="large-textarea"></textarea>
+    </div>
+    <!--<div>
+      <label>Vista previa:</label>
+      <markdown [data]="formulario.get('texto')?.value"></markdown>
+    </div>-->
+    <div>
+      <label for="latitud">Latitud (opcional):</label>
+      <input id="latitud" formControlName="latitud" type="text">
+    </div>
+    <div>
+      <label for="altitud">Altitud (opcional):</label>
+      <input id="altitud" formControlName="altitud" type="text">
+    </div>
+    <div>
+      <label for="imagenes">Imágenes (opcional):</label>
+      <input id="imagenes" formControlName="imagenes" type="file" multiple>
+    </div>
+    <button type="submit">Enviar</button>
+  </form>
