@@ -1,1 +1,46 @@
-<p>user-details works!</p>
+<!--<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>LaWikiFe</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <div class="col">
+        <div class="row container">
+            <div class="col">
+                <img src="/assets/FpMpIl9agAAMpi2.jpg" class="userImage">
+            </div>
+            <div class="col">
+                <p>USERNAME</p>
+                <p>Reviews</p>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <h3>Entradas del usuario:</h3>
+            <div>
+              @for(entry of userEntries; track entry.url){
+                <li>{{entry.url}}</li>
+              } @empty {
+                <li>There are no entries.</li>
+              }
+            </div>
+        </div>
+    </div>
+</body>
+</html>-->
+
+<div *ngIf="usuario" style="text-align: center;">
+  <h2>{{ usuario.nombre }}</h2>
+  <p>{{ usuario.valoracion }}/5 ⭐</p>
+</div>
+<div style="text-align: center;">
+  <h3>Entradas del usuario:</h3>
+  @for(entry of userEntries; track entry.titulo){
+    <li>{{entry.titulo}}</li>
+  } @empty {
+    <li>There are no entries.</li>
+  }
+</div>
