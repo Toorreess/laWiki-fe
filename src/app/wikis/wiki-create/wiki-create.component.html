@@ -1,0 +1,39 @@
+<div class="wiki-create-container">
+  <h1>Crear Nueva Wiki</h1>
+  <form (ngSubmit)="createWiki()" class="wiki-create-form">
+    <!-- Campo para el nombre de la wiki -->
+    <label for="name">Nombre de la Wiki:</label>
+    <input
+      id="name"
+      type="text"
+      [(ngModel)]="newWiki.name"
+      name="name"
+      placeholder="Introduce el nombre de la wiki"
+      required
+    />
+
+    <!-- Campo para la descripción de la wiki -->
+    <label for="description">Descripción:</label>
+    <textarea
+      id="description"
+      [(ngModel)]="newWiki.description"
+      name="description"
+      placeholder="Describe la wiki"
+      required
+    ></textarea>
+
+    <!-- Campo para la URL de la imagen -->
+    <label for="image">URL de la Imagen:</label>
+    <input
+      id="image"
+      type="text"
+      [(ngModel)]="newWiki.image"
+      name="image"
+      placeholder="Introduce la URL de la imagen"
+      required
+    />
+
+    <!-- Botón para enviar -->
+    <button type="submit" class="submit-button">Guardar Wiki</button>
+  </form>
+</div>

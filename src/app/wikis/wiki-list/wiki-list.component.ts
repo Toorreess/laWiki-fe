@@ -3,10 +3,12 @@ import { WikiService } from '../shared/wiki.service';
 import { Wiki } from '../shared/wiki.model';
 import { WikiCardComponent } from '../wiki-card/wiki-card.component';
 import { CommonModule } from '@angular/common';
+import { RouterModule, RouterLink, RouterLinkActive} from '@angular/router';
+
 
 @Component({
   selector: 'app-wiki-list',
-  imports: [CommonModule, WikiCardComponent],
+  imports: [CommonModule, RouterModule,WikiCardComponent, RouterLink, RouterLinkActive], // Agrega WikiCardComponent y RouterModule aquí
   templateUrl: './wiki-list.component.html',
   styleUrls: ['./wiki-list.component.css']
 })
