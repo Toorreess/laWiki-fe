@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { MarkdownModule } from 'ngx-markdown';
+
 
 @Component({
   selector: 'app-form',
@@ -10,8 +10,7 @@ import { MarkdownModule } from 'ngx-markdown';
   standalone: true,
   imports: [
     CommonModule,
-    ReactiveFormsModule,
-    MarkdownModule
+    ReactiveFormsModule
   ]
 })
 export class EntryFormComponent implements OnInit {

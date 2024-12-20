@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { CommentListComponent } from '../../comments/comment-list/comment-list.component';
 
 @Component({
   selector: 'app-lista-details',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,CommentListComponent],
   templateUrl: './entry-details.component.html',
   styleUrls: ['./entry-details.component.css']
 })
