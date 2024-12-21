@@ -17,10 +17,10 @@ export class WikiService {
   }
 
   addWiki(newWiki: Wiki): Observable<void> {
-    // Generar un nuevo ID basado en el tamaño del arreglo existente
+    // Asignar un ID único a la nueva wiki
     newWiki.id = this.wikis.length > 0 ? this.wikis[this.wikis.length - 1].id + 1 : 1;
 
-    // Agregar la nueva wiki al arreglo
+    // Agregar la nueva wiki 
     this.wikis.push(newWiki);
 
     // Retornar un observable vacío para confirmar que la operación se completó

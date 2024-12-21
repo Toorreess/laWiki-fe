@@ -22,18 +22,18 @@
       required
     ></textarea>
 
-    <!-- Campo para la URL de la imagen -->
-    <label for="image">URL de la Imagen:</label>
+    <!-- Campo para subir la imagen -->
+    <label for="image">Subir Imagen:</label>
     <input
       id="image"
-      type="text"
-      [(ngModel)]="newWiki.image"
+      type="file"
+      (change)="onFileSelected($event)"
       name="image"
-      placeholder="Introduce la URL de la imagen"
+      accept="image/*"
       required
     />
 
     <!-- Botón para enviar -->
-    <button type="submit" class="submit-button">Guardar Wiki</button>
+    <button  type="submit" class="submit-button">Guardar Wiki</button>
   </form>
 </div>
