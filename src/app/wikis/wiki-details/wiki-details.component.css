@@ -1,0 +1,15 @@
+.wiki-details {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .wiki-details h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .wiki-details p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
