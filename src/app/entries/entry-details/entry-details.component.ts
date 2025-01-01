@@ -7,8 +7,9 @@ import { CommentService } from '../../comments/shared/comment.service';
   selector: 'app-entry-details',
   imports: [CommentListComponent],
   templateUrl: './entry-details.component.html',
-  styleUrl: './entry-details.component.css'
+  styleUrls: ['./entry-details.component.css']
 })
+
 export class EntryDetailsComponent implements OnInit {
   comments: any[] = [];
 

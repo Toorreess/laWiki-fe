@@ -9,11 +9,15 @@ import { CommentService } from '../shared/comment.service';
   templateUrl: './comment-list.component.html',
   styleUrl: './comment-list.component.css'
 })
-export class CommentListComponent implements OnInit {
-  @Input() comments: Comment[] = [];
 
-  constructor() { }
+export class CommentListComponent {
+  comments: Comment[] = [];
+
+  constructor(private commentService: CommentService) { }
 
   ngOnInit(): void {
-    }
+    this.commentService.getComments("").subscribe((comments) => {
+      this.comments = comments;
+    })
+  }
 }

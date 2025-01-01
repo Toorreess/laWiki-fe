@@ -1,1 +1,5 @@
-<app-comment-list [comments]="comments"></app-comment-list>
+<div *ngIf="entrada">
+    <h2>{{ entrada.titulo }}</h2>
+    <p>{{ entrada.contenido }}</p>
+    <app-comment-list></app-comment-list>
+</div>

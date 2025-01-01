@@ -4,11 +4,15 @@ import { CommentDetailsComponent } from './comment-details/comment-details.compo
 import { CommentListComponent } from './comment-list/comment-list.component';
 
 @NgModule({
-  declarations: [
-    CommonModule,
-    CommentDetailsComponent,
+export class CommentsModule { }
+  imports: [
+    CommonModule, // Importa módulos necesarios
+    CommentDetailsComponent, // Importa el componente standalone
+    CommentListComponent // Importa otro componente standalone si aplica
+  ],
+  exports: [
+    CommentDetailsComponent, // Exporta si otros módulos necesitan usar este componente
     CommentListComponent
   ]
 })
-
-export class CommentsModule { }
+export class CommentsComponent { }
