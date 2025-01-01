@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { CommentDetailsComponent } from './comment-details/comment-details.component';
 import { CommentListComponent } from './comment-list/comment-list.component';
 
 @NgModule({
+export class CommentsModule { }
   imports: [
     CommonModule, // Importa módulos necesarios
     CommentDetailsComponent, // Importa el componente standalone
