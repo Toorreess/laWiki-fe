@@ -1,1 +1,22 @@
-<p>user-details works!</p>
+<div *ngIf="usuario" class="user-container" style="text-align: center;">
+  <div class="user-info" style="display: flex; align-items: center; justify-content: center;">
+    <!-- User Image -->
+    <div style="margin-right: 10px;">
+      <img src="https://pbs.twimg.com/media/FoKXoz8aIAEz6pY.png" alt="user image" style="width: 100px; height: 100px; border-radius: 50%;">
+    </div>
+    <!-- User Name and Rating -->
+    <div>
+      <h2 style="margin: 0;">{{ usuario.nombre }}</h2>
+      <p style="margin: 0;">{{ usuario.valoracion }}/5 ⭐</p>
+    </div>
+  </div>
+</div>
+
+<div style="text-align: center;">
+  <h3><u>Entradas del usuario:</u></h3>
+  @for(entry of userEntries; track entry.titulo){
+    <li>{{entry.titulo}}</li>
+  } @empty {
+    <li>There are no entries.</li>
+  }
+</div>
