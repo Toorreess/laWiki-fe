@@ -1,1 +1,11 @@
-<p>wiki-list works!</p>
+<div class="wiki-container">
+  <h1> Wikis Populares</h1>
+  
+  <a routerLink="/wikis/create" routerLinkActive="active" ariaCurrentWhenActive="page" >Crear Nueva Wiki</a>
+
+  <div class="wiki-list">
+    <app-wiki-card *ngFor="let wiki of wikis" [wiki]="wiki"></app-wiki-card>
+  </div>
+</div>
+
+  
