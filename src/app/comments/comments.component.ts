@@ -1,11 +1,18 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, NgModule } from '@angular/core';
+import { CommentDetailsComponent } from './comment-details/comment-details.component';
+import { CommentListComponent } from './comment-list/comment-list.component';
 
-@Component({
-  selector: 'app-comments',
-  imports: [],
-  templateUrl: './comments.component.html',
-  styleUrl: './comments.component.css'
+@NgModule({
+export class CommentsModule { }
+  imports: [
+    CommonModule, // Importa módulos necesarios
+    CommentDetailsComponent, // Importa el componente standalone
+    CommentListComponent // Importa otro componente standalone si aplica
+  ],
+  exports: [
+    CommentDetailsComponent, // Exporta si otros módulos necesitan usar este componente
+    CommentListComponent
+  ]
 })
-export class CommentsComponent {
-
-}
+export class CommentsComponent { }

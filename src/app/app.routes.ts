@@ -5,6 +5,10 @@ import { WikiDetailsComponent } from './wikis/wiki-details/wiki-details.componen
 import { WikiCreateComponent } from './wikis/wiki-create/wiki-create.component';
 
 export const routes: Routes = [
+	{
+		path: 'entry-details',
+		loadComponent: () => import('./entries/entry-details/entry-details.component').then(m => m.EntryDetailsComponent)
+	}
   { path: '', redirectTo: '/wikis', pathMatch: 'full' }, // Redirige a /wikis por defecto
   { path: 'wikis', component: WikiListComponent },       // Ruta para el componente de wikis
   { path: 'wikis/create', component: WikiCreateComponent },  // Ruta para crear un nuevo wiki
