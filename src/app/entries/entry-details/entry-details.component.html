@@ -1,1 +1,8 @@
-<p>entry-details works!</p>
+<div class="entry-details" *ngIf="entry">
+    <h1>{{ entry.titulo }}</h1>
+    <p>{{ entry.contenido }}</p>
+    <span>by {{ entry.autor }}</span>
+  
+    <h2>Comentarios</h2>
+    <!-- <app-comment-list [comments]="comments"></app-comment-list> -->
+  </div>
