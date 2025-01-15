@@ -1,9 +1,9 @@
 <div *ngFor="let entrada of entradas; let i = index" class="entrada">
-    <a [routerLink]="['/entries', entrada.id]" class="entrada-link">
-      <h3>
-        {{ entrada.titulo }} 
-        <span class="autor">by {{ entrada.autor }}</span>
-      </h3>
-      <p>{{ entrada.contenido }}</p>
-    </a>
-  </div>
+  <a [routerLink]="['/entries', entrada.id]" class="entrada-link">
+    <h3>
+      {{ entrada.titulo }}
+      <span class="autor">by {{ entrada.autor }}</span>
+    </h3>
+  </a>
+</div>
+
