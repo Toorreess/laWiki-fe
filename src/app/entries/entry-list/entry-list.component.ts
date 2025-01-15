@@ -5,7 +5,7 @@ import { Entry } from '../shared/entry.model';
 import { EntryService } from '../shared/entry.service';
 
 @Component({
-  selector: 'app-lista-entradas',
+  selector: 'app-entry-list',
   standalone: true,
   imports: [RouterModule, NgFor],
   templateUrl: './entry-list.component.html',

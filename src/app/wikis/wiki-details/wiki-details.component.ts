@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Wiki } from '../shared/wiki.model';
 import { WikiService } from '../shared/wiki.service';
-import { RouterModule } from '@angular/router'; // Importa RouterModule
+import { RouterModule } from '@angular/router';
+import { EntryListComponent } from '../../entries/entry-list/entry-list.component'; // Importación relativa
 
 @Component({
   selector: 'app-wiki-details',
   standalone: true,
-  imports: [RouterModule], // Agrega RouterModule a las importaciones
+  imports: [RouterModule, EntryListComponent], 
   templateUrl: './wiki-details.component.html',
   styleUrls: ['./wiki-details.component.css'],
 })

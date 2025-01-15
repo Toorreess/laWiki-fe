@@ -2,7 +2,9 @@
     <h1>{{ wiki.name }}</h1>
     <p>{{ wiki.description }}</p>
     <a [routerLink]="['/wikis', wiki.id, 'create-entry']" class="button-link">Crear Entrada</a>
-  </div>
+    <app-entry-list [wikiId]="wiki.id"></app-entry-list>
+
+</div>
   
   
   
