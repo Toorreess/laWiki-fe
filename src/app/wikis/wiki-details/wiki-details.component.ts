@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Wiki } from '../shared/wiki.model';
 import { WikiService } from '../shared/wiki.service';
+import { RouterModule } from '@angular/router'; // Importa RouterModule
 
 @Component({
   selector: 'app-wiki-details',
   standalone: true,
-  imports: [],
+  imports: [RouterModule], // Agrega RouterModule a las importaciones
   templateUrl: './wiki-details.component.html',
-  styleUrls: ['./wiki-details.component.css']
+  styleUrls: ['./wiki-details.component.css'],
 })
 export class WikiDetailsComponent implements OnInit {
   wiki!: Wiki;

@@ -14,7 +14,7 @@ import { WikiCardComponent } from './wiki-card/wiki-card.component';
     WikiListComponent, // Exportar si necesitas usarlo fuera del módulo
   ]
 })
-export class WikisModule {}
+export class WikisComponent {}
 
 
 
