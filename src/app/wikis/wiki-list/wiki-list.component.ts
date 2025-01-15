@@ -4,11 +4,12 @@ import { Wiki } from '../shared/wiki.model';
 import { WikiCardComponent } from '../wiki-card/wiki-card.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule, RouterLink, RouterLinkActive} from '@angular/router';
+import { NavbarComponent } from "../../shared/components/navbar/navbar.component";
 
 
 @Component({
   selector: 'app-wiki-list',
-  imports: [CommonModule, RouterModule,WikiCardComponent, RouterLink, RouterLinkActive], // Agrega WikiCardComponent y RouterModule aquí
+  imports: [CommonModule, RouterModule, WikiCardComponent, RouterLink, RouterLinkActive, NavbarComponent], // Agrega WikiCardComponent y RouterModule aquí
   templateUrl: './wiki-list.component.html',
   styleUrls: ['./wiki-list.component.css']
 })
