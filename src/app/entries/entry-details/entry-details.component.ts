@@ -3,11 +3,12 @@ import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { EntryService } from '../shared/entry.service';
 import { Entry } from '../shared/entry.model';
+import { MapaComponent } from '../mapa/mapa.component';
 
 @Component({
   selector: 'app-entry-details',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MapaComponent],
   templateUrl: './entry-details.component.html',
   styleUrls: ['./entry-details.component.css']
 })
@@ -26,3 +27,4 @@ export class EntryDetailsComponent implements OnInit {
     });
   }
 }
+

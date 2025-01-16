@@ -1,9 +1,21 @@
 <div class="entry-details" *ngIf="entry">
-    <h1>{{ entry.titulo }}</h1>
-    <span>by {{ entry.autor }}</span>
-    <p>{{ entry.contenido }}</p>
-    
-  
-    <h2>Comentarios</h2>
-    <!-- <app-comment-list [comments]="comments"></app-comment-list> -->
+  <h1>{{ entry.titulo }}</h1>
+  <span>by {{ entry.autor }}</span>
+  <p>{{ entry.contenido }}</p>
+
+  <!-- Mostrar la imagen si existe -->
+  <div *ngIf="entry.imagenUrl" class="entry-image">
+    <img [src]="entry.imagenUrl" alt="Imagen de {{ entry.titulo }}" />
   </div>
+
+  <!-- Mostrar el mapa si la ubicación existe -->
+  <div *ngIf="entry.ubicacion" class="entry-map">
+    <h2>Mapa</h2>
+    <app-mapa [latitude]="entry.ubicacion.lat" [longitude]="entry.ubicacion.lng"></app-mapa>
+  </div>
+
+  <h2>Comentarios</h2>
+  <!-- <app-comment-list [comments]="comments"></app-comment-list> -->
+</div>
+
+  

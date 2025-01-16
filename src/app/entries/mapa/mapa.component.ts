@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, Input, ViewChild } from '@angular/core';
 import Map from 'ol/Map';
 import View from 'ol/View';
 import TileLayer from 'ol/layer/Tile';
@@ -13,7 +13,7 @@ import OSM from 'ol/source/OSM';
   `,
   styles: [`
     .map-container {
-      width: 50%;
+      width: 80%;
       height: 500px;
       border: 1px solid #ccc;
     }
@@ -21,6 +21,9 @@ import OSM from 'ol/source/OSM';
 })
 export class MapaComponent implements AfterViewInit {
   @ViewChild('mapContainer', { static: false }) mapContainer!: ElementRef;
+
+  @Input() latitude: number = 0; // Coordenada de latitud
+  @Input() longitude: number = 0; // Coordenada de longitud
 
   private map!: Map;
 
@@ -34,8 +37,8 @@ export class MapaComponent implements AfterViewInit {
           })
         ],
         view: new View({
-          center: fromLonLat([-4.42034, 36.72016]), // Coordenadas del mapa
-          zoom: 13 //zoom por defecto
+          center: fromLonLat([this.longitude, this.latitude]), // Usar coordenadas dinámicas
+          zoom: 13 // Zoom por defecto
         })
       });
     } else {

@@ -6,10 +6,37 @@ import { Entry } from './entry.model';
 })
 export class EntryService {
   private entris: Entry[] = [
-    { id: 1, titulo: '2123', autor: 'autor1', contenido: '13123123', wikiId: 1 },
-    { id: 2, titulo: 'PMBOK', autor: 'autor2', contenido: 'apisonadora xd', wikiId: 2 },
-    { id: 3, titulo: 'aaaaaa', autor: 'autor3', contenido: 'ababB', wikiId: 3 },
-    { id: 4, titulo: 'PRUEBAAAA', autor: 'autor2', contenido: 'HOLA', wikiId: 2 },
+    {
+      id: 1,
+      titulo: 'Visita al Parque Central',
+      autor: 'Guía Local',
+      contenido: 'Un recorrido inolvidable por el parque central de la ciudad.',
+      wikiId: 1,
+      imagenUrl: 'centralPark.jpg',
+      ubicacion: { lat: 40.785091, lng: -73.968285 }, 
+    },
+    {
+      id: 2,
+      titulo: 'Historia del PMBOK',
+      autor: 'autor2',
+      contenido: 'Explorando los estándares y prácticas de gestión de proyectos.',
+      wikiId: 2,
+    },
+    {
+      id: 3,
+      titulo: 'Explorando las Montañas',
+      autor: 'Explorador Aficionado',
+      contenido: 'Descubre las maravillas naturales ocultas en las montañas.',
+      wikiId: 3,
+      ubicacion: { lat: 46.8523, lng: -121.7603 }, // Ubicación cerca del Monte Rainier
+    },
+    {
+      id: 4,
+      titulo: 'PRUEBAAAA',
+      autor: 'autor2',
+      contenido: 'HOLA',
+      wikiId: 2,
+    },
   ];
 
   getEntries(): Entry[] {
