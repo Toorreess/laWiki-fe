@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Wiki } from '../shared/wiki.model';
 import { WikiService } from '../shared/wiki.service';
 import { RouterModule } from '@angular/router';
-import { EntryListComponent } from '../../entries/entry-list/entry-list.component'; // Importación relativa
+import { EntryListComponent } from '../../entries/entry-list/entry-list.component'; 
 
 @Component({
   selector: 'app-wiki-details',

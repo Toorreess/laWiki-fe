@@ -1,1 +1,9 @@
-<p>comment-list works!</p>
+<div *ngIf="comments.length > 0; else noComments">
+	<div *ngFor="let comment of comments">
+	  <p><strong>{{ comment.author }}</strong>: {{ comment.content }}</p>
+	</div>
+  </div>
+  <ng-template #noComments>
+	<p>No hay comentarios para esta entrada.</p>
+  </ng-template>
+  
