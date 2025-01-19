@@ -24,9 +24,9 @@ export class EntryDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      const entryId = +params['id']; // Obtén el ID de la URL
+      const entryId = params['id'];  // Obtén el ID de la URL
       console.log('entryId:', entryId);  // Verifica que el ID esté bien
-      this.entry = this.entryService.getEntries().find(entry => entry.id === entryId)!; // Encuentra la entrada por ID
+      this.entry = this.entryService.getAllEntries().find(entry => entry.id === entryId)!; // Encuentra la entrada por ID
     });
   }
 }

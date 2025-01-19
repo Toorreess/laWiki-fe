@@ -1,11 +1,18 @@
-<div class="wiki-details">
+<div class="wiki-details" *ngIf="wiki">
     <h1>{{ wiki.name }}</h1>
     <p>{{ wiki.description }}</p>
-    <a [routerLink]="['/wikis', wiki.id, 'create-entry']" class="button-link">Crear Entrada</a>
+  
+    <h2>Entradas</h2>
     <app-entry-list [wikiId]="wiki.id"></app-entry-list>
+  </div>
 
-</div>
+
+
+<!-- <div class="wiki-details" *ngIf="wiki">
+    <h1>{{ wiki.name }}</h1>
+    <p>{{ wiki.description }}</p>
+    <img [src]="wiki.image" alt="{{ wiki.name }}">
   
-  
-  
- 
+    <h2>Entradas</h2>
+    <app-lista-entradas [entradas]="entries"></app-lista-entradas>
+  </div> -->

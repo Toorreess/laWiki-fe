@@ -20,8 +20,6 @@ export class EntryListComponent implements OnInit {
   ngOnInit(): void {
     if (this.wikiId) {
       this.entradas = this.entryService.getEntriesByWikiId(this.wikiId);
-    } else {
-      this.entradas = this.entryService.getEntries();
-    }
+    } 
   }
 }

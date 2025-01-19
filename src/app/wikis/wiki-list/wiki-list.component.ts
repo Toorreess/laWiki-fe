@@ -19,8 +19,16 @@ export class WikiListComponent implements OnInit {
   constructor(private wikiService: WikiService) { }
 
   ngOnInit(): void {
-    this.wikiService.getWikis().subscribe((data) => {
-      this.wikis = data;
+    this.wikiService.getWikis().subscribe({
+      next: (data: Wiki[]) => {
+        this.wikis = data;
+      },
+      error: (error: any) => {
+        console.error('Error fetching wikis', error);
+      },
+      complete: () => {
+        console.log('Wiki fetching completed');
+      }
     });
   }
 

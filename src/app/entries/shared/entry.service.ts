@@ -43,6 +43,24 @@ export class EntryService {
 
   constructor(private dataService: DataService) { }
 
+  public getAllEntries(): Entry[] {
+    let entries: Entry[] = [];
+
+    this.dataService.getEntities('entries').subscribe({
+      next: (resp: any) => {
+        console.log(resp);
+        entries = resp.items;
+      },
+      error: (error: any) => {
+        console.log(error);
+      },
+      complete: () => console.log('complete')
+    });
+
+    return entries;
+  }
+
+
   public getEntries(wiki_id: string): Entry[] {
     let entries: Entry[] = [];
 
