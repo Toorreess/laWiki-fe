@@ -3,7 +3,7 @@ import { WikiService } from '../shared/wiki.service';
 import { Wiki } from '../shared/wiki.model';
 import { WikiCardComponent } from '../wiki-card/wiki-card.component';
 import { CommonModule } from '@angular/common';
-import { RouterModule, RouterLink, RouterLinkActive} from '@angular/router';
+import { RouterModule, RouterLink, RouterLinkActive } from '@angular/router';
 import { NavbarComponent } from "../../shared/components/navbar/navbar.component";
 
 
@@ -16,7 +16,7 @@ import { NavbarComponent } from "../../shared/components/navbar/navbar.component
 export class WikiListComponent implements OnInit {
   wikis: Wiki[] = [];
 
-  constructor(private wikiService: WikiService) {}
+  constructor(private wikiService: WikiService) { }
 
   ngOnInit(): void {
     this.wikiService.getWikis().subscribe((data) => {

@@ -10,7 +10,7 @@ export class DataService {
 
   private api_url = 'http://localhost:8080/api';
 
-  public getEntitites(endpoint: string, params: any = {}) {
+  public getEntities(endpoint: string, params: any = {}) {
     return this.http.get(`${this.api_url}/${endpoint}`, { params });
   }
 

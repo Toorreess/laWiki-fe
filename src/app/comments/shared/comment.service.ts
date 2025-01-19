@@ -49,7 +49,7 @@ export class CommentService {
 
     let comments: Comment[] = [];
 
-    this.dataService.getEntitites(`entries/${entry_id}/comments`, searchParams).subscribe({
+    this.dataService.getEntities(`entries/${entry_id}/comments`, searchParams).subscribe({
       next: (resp: any) => {
         console.log(resp);
         comments = resp.items;
