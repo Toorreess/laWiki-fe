@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -17,11 +18,11 @@ export class DataService {
     return this.http.get(`${this.api_url}/${endpoint}/${id}`);
   }
 
-  public createEntity(endpoint: string, data: any) {
+  public postEntity(endpoint: string, data: any) {
     return this.http.post(`${this.api_url}/${endpoint}`, data);
   }
 
-  public updateEntity(endpoint: string, id: string, data: any) {
+  public putEntity(endpoint: string, id: string, data: any) {
     return this.http.put(`${this.api_url}/${endpoint}/${id}`, data);
   }
 
