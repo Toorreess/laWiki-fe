@@ -8,7 +8,7 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  private api_url = 'http://localhost:8080/api';
+  private api_url = 'http://localhost:8080/api/v1';
 
   public getEntities(endpoint: string, params: any = {}) {
     return this.http.get(`${this.api_url}/${endpoint}`, { params });
