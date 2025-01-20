@@ -94,6 +94,7 @@
       }
     }
   },
+  "proxyConfig": "src/proxy.conf.json",
   "cli": {
     "analytics": false
   }
